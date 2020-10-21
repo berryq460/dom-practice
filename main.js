@@ -11,6 +11,18 @@
 // cumin
 // cocoa
 
+var recipe = {
+  'title': 'Mole',
+  'servings': 2,
+  'ingredients': ['cumin', 'cinnamon', 'cocoa']
+};
+
+console.log(recipe.title);
+console.log('Servings: ' + recipe.servings);
+console.log('Ingredients:');
+for (var i = 0; i < recipe.ingredients.length; i++) {
+  console.log(recipe.ingredients[i]);
+}
 
 
 
@@ -18,12 +30,32 @@
 // Create an array of objects, where each object describes
 // a book and has properties for the *title*(a string), *author*(a string)
 // and *alreadyRead* (a boolean indicating if you read it yet)
+
 // Iterate through the array of objects of books. For each book, log the book title and book
 // author like so: "1984 by George Orwell"
 // Now use an if/else statement to change the output depending on whether you read it
 // or not. If you read it, log a string like "You already read "1984" by George Orwell"
 // and vice versa
 
+var books = [
+  {title: 'The Design of EveryDay Things',
+   author: 'Don Norman',
+   alreadyRead: false
+  },
+  {title: 'The Most Human Human',
+  author: 'Brian Christian',
+  alreadyRead: true
+  }];
+
+for (var i = 0; i < books.length; i++) {
+  var book = books[i];
+  var bookInfo = book.title + '" by ' + book.author;
+  if (book.alreadyRead) {
+    console.log('You already read "' + bookInfo);
+  } else {
+    console.log('You still need to read "' + bookInfo);
+  }
+}
 
 
 //Exercise #3
@@ -35,7 +67,10 @@
 //   releaseYear: 1994, 
 //   duration: 142
 // }
-// After you have crreated your movie object, print the title 
+
+let favoriteMovie = "Last Samurai"
+
+// After you have created your movie object, print the title 
 // of your movie using dot notation
 // Print the director's name
 // Print the release year
